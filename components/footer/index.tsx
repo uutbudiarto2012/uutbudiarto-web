@@ -1,8 +1,8 @@
-import { BiLogoInstagramAlt } from "react-icons/bi";
-import Link from 'next/link'
-import MainLogo from '../logo/MainLogo'
-import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
+import Link from 'next/link';
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { FaXTwitter } from "react-icons/fa6";
+import WhiteLogo from "../logo/WhiteLogo";
 
 export default function MainFooter() {
   return (
@@ -13,7 +13,7 @@ export default function MainFooter() {
       <div className="container py-8">
         <div className='flex justify-between'>
           <div>
-            <MainLogo />
+            <WhiteLogo />
             <p className='text-xs font-semibold text-slate-300'>jawaskrip@gmail.com</p>
           </div>
           <div className="flex gap-2">

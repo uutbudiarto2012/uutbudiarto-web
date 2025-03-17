@@ -12,10 +12,10 @@ export default function MainNavbar() {
         </div>
         <div className='flex-1 flex justify-end gap-6'>
           <div className='hidden md:flex items-center flex-1 gap-6'>
-            <Link href={'/'}>Experience</Link>
-            <Link href={'/'}>Work</Link>
-            <Link href={'/'}>Gallery</Link>
-            <Link href={'/'}>Blog</Link>
+            <Link href={'/experience'}>Experience</Link>
+            <Link href={'/work'}>Work</Link>
+            <Link href={'/gallery'}>Gallery</Link>
+            <Link href={'/blog'}>Blog</Link>
           </div>
           <div>
             <Button className='px-6'>Hire Me</Button>
