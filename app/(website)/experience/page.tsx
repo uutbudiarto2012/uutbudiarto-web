@@ -67,7 +67,7 @@ export default function ExperiencePage() {
               </div>
             </div>
           </div>
-          <div className="flex mt-4 gap-2">
+          <div className="flex mt-4 gap-2 flex-wrap">
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>VueJS</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>NuxtJS</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>TailwindCSS</div>
@@ -157,7 +157,7 @@ export default function ExperiencePage() {
               </div>
             </div>
           </div>
-          <div className="flex mt-4 gap-2">
+          <div className="flex mt-4 gap-2 flex-wrap">
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>Laravel</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>ExpressJS</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>MySQL</div>
@@ -205,7 +205,7 @@ export default function ExperiencePage() {
               </div>
             </div>
           </div>
-          <div className="flex mt-4 gap-2">
+          <div className="flex mt-4 gap-2 flex-wrap">
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>NodeJS</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>ExpressJS</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>MongoDB</div>
@@ -284,7 +284,7 @@ export default function ExperiencePage() {
               </div>
             </div>
           </div>
-          <div className="flex mt-4 gap-2">
+          <div className="flex mt-4 gap-2 flex-wrap">
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>CodeIgniter3</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>ReactJS</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>ReactNative</div>
@@ -308,7 +308,7 @@ export default function ExperiencePage() {
               and monitor data.
             </p>
           </div>
-          <div className="flex mt-4 gap-2">
+          <div className="flex mt-4 gap-2 flex-wrap">
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>ReactJS</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>Bootstrap</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>CSS3</div>
@@ -345,7 +345,7 @@ export default function ExperiencePage() {
               ✅ Using GitHub for version control and project management.
             </div>
           </div>
-          <div className="flex mt-4 gap-2">
+          <div className="flex mt-4 gap-2 flex-wrap">
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>PHP</div>
             <div className='px-2 py-1 border border-myprimary-superlight/20 text-sm font-bold text-myprimary-superlight'>MYSQL</div>
           </div>

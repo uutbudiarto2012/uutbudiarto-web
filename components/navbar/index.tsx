@@ -1,11 +1,15 @@
 "use client"
-import React, { useEffect, useState } from 'react'
-import MainLogo from '../logo/MainLogo'
-import Link from 'next/link'
-import { Button } from '../ui/button'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import MainLogo from '../logo/MainLogo'
+import { Button } from '../ui/button'
+import MenuMobile from './menu-mobile'
 
 export default function MainNavbar() {
+  const pathname = usePathname()
+  const mainPath = pathname.split('/')[1]
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -33,13 +37,22 @@ export default function MainNavbar() {
         </div>
         <div className='flex-1 flex justify-end gap-6'>
           <div className='hidden md:flex items-center flex-1 gap-6'>
-            <Link href={'/experience'}>Experience</Link>
-            <Link href={'/work'}>Work</Link>
-            <Link href={'/gallery'}>Gallery</Link>
-            <Link href={'/blog'}>Blog</Link>
+            <Link className={cn(
+              mainPath === 'experience' ?'text-myprimary-superlight':''
+            )} href={'/experience'}>Experience</Link>
+            <Link className={cn(
+              mainPath === 'work' ?'text-myprimary-superlight':''
+            )} href={'/work'}>Work</Link>
+            <Link className={cn(
+              mainPath === 'gallery' ?'text-myprimary-superlight':''
+            )} href={'/gallery'}>Gallery</Link>
+            <Link className={cn(
+              mainPath === 'blog' ?'text-myprimary-superlight':''
+            )} href={'/blog'}>Blog</Link>
           </div>
-          <div>
+          <div className='flex gap-2 items-center'>
             <Button className='px-6'>Hire Me</Button>
+            <MenuMobile />
           </div>
         </div>
       </div>

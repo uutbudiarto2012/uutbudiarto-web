@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from 'next/font/google';
+import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
 import { cn } from "@/lib/utils";
 const os = Open_Sans({
@@ -25,6 +26,7 @@ export default function RootLayout({
           'bg-slate-950 text-slate-200'
         )}
       >
+        <NextTopLoader />
         {children}
       </body>
     </html>
