@@ -357,10 +357,10 @@ export default function ExperiencePage() {
   return (
     <PageContainer title='Experience' subtitle='My experience in working in a company'>
       <div className="bg-slate-900/50 h-full relative">
-        <div className="absolute left-0 right-0 top-0 bottom-0 z-0">
-          <Image className='z-0 opacity-5 object-cover' fill alt='ETH' src={'/images/skills/bg-buble.png'} />
+        <div className="absolute left-0 right-0 top-0 bottom-0 w-full z-0">
+          <Image className='z-0 opacity-10 blur-xl object-cover grayscale' fill alt='ETH' src={'/images/skills/bg-buble.png'} />
         </div>
-        <div className="container relative z-10 backdrop-blur">
+        <div className="container relative z-10">
           <div className="w-full">
             <Timeline data={data} />
           </div>

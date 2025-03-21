@@ -10,7 +10,7 @@ type PageContainerProps = {
 export default function PageContainer(props: PageContainerProps) {
   return (
     <div>
-      <header className='relative h-[35vh] pt-[70px]'>
+      <header className='relative h-[35vh] pt-[120px]'>
         <div className="absolute left-0 right-0 top-0 bottom-0 z-0">
           <Image className='z-0 opacity-10 object-fill' fill alt='ETH' src={'/images/bg-grid.png'} />
         </div>
