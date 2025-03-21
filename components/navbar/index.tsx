@@ -49,9 +49,6 @@ export default function MainNavbar() {
             <Link className={cn(
               mainPath === 'blog' ?'text-myprimary-superlight':''
             )} href={'/blog'}>Blog</Link>
-            <Link className={cn(
-              mainPath === 'about' ?'text-myprimary-superlight':''
-            )} href={'/about'}>About</Link>
           </div>
           <div className='flex gap-2 items-center'>
             <Button className='px-6'>Hire Me</Button>
