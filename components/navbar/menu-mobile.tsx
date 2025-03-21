@@ -35,7 +35,7 @@ export default function MenuMobile() {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <Link href={'/'}>About</Link>
+          <Link href={'/about'}>About</Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

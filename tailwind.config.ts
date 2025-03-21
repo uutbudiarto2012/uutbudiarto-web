@@ -69,6 +69,13 @@ const config: Config = {
 					'5': 'hsl(var(--chart-5))'
 				}
 			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100ch', // add required value here
+					}
+				}
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -78,6 +85,7 @@ const config: Config = {
 	},
 	plugins: [
 		require("tailwindcss-animate"),
+		require("@tailwindcss/typography"),
 		addVariablesForColors
 	],
 };

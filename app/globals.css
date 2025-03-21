@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 @layer base {
     :root {
@@ -65,20 +65,30 @@
     }
 }
 
-h1,h2,h3{
-  font-family: "Teko", sans-serif;
+h1,
+h2,
+h3 {
+    font-family: "Teko", sans-serif;
 }
 
-
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 
-  .badge-primary{
-    @apply text-xs md:text-sm font-bold max-w-max flex items-center justify-center bg-myprimary-superlight/20 text-myprimary-superlight border border-myprimary-superlight/20 px-3 py-1 rounded-md;
-  }
+    .badge-primary {
+        @apply text-xs md:text-sm font-bold max-w-max flex items-center justify-center bg-myprimary-superlight/20 text-myprimary-superlight border border-myprimary-superlight/20 px-3 py-1 rounded-md;
+    }
+    article h1,
+    article h2,
+    article h3,
+    article h4,
+    article h5,
+    article h6,
+    article code {
+        @apply text-slate-300 !important;
+    }
 }
