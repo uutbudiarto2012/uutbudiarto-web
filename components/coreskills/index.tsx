@@ -6,7 +6,7 @@ export default function CoreSkills() {
       <div className="container">
         <header className='text-center space-y-3 mb-6 md:mb-12 max-w-3xl mx-auto'>
           <p className='uppercase font-bold text-myprimary-superlight'>What I Do?</p>
-          <h2 className='text-3xl md:text-5xl leading-none md:leading-relaxed font-extrabold text-slate-400 uppercase'>
+          <h2 className='text-3xl md:text-5xl leading-none font-extrabold text-slate-400 uppercase'>
             Building Scalable & Innovative Digital Solutions.
           </h2>
         </header>

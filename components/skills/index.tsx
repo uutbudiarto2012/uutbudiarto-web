@@ -1,6 +1,6 @@
+"use client"
 import Image from "next/image";
 import { GlowingEffect } from "../ui/glowing-effect";
-
 export default function SkillSection() {
 
   return (
@@ -38,6 +38,7 @@ export default function SkillSection() {
 
 const SkillItem = ({ image, name, desc }: { image: string, name: string, desc: string }) => {
   return (
+
     <div className="relative border border-myprimary-light/10 p-4 md:py-7 rounded-lg bg-gradient-to-tr from-myprimary/30 via-myprimary-superlight/5 to-white/20 backdrop-blur">
       <GlowingEffect
         blur={0}

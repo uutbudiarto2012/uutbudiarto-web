@@ -1,17 +1,18 @@
 import React from 'react'
 import { Teko } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 const teko = Teko({
   subsets: ["latin-ext"]
 })
 export default function WhiteLogo() {
   return (
-    <div className={cn(
+    <Link href={'/'} className={cn(
       teko.className,
-      'text-4xl font-extrabold',
+      'text-4xl font-extrabold block',
       'text-white'
     )}>
       Uut Budiarto
-    </div>
+    </Link>
   )
 }
