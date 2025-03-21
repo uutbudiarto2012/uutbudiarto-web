@@ -36,7 +36,7 @@ export default function MainNavbar() {
           <MainLogo />
         </div>
         <div className='flex-1 flex justify-end gap-6'>
-          <div className='hidden md:flex items-center flex-1 gap-6'>
+          <div className='hidden md:flex items-center justify-center flex-1 gap-x-12'>
             <Link className={cn(
               mainPath === 'experience' ?'text-myprimary-superlight':''
             )} href={'/experience'}>Experience</Link>
@@ -49,6 +49,9 @@ export default function MainNavbar() {
             <Link className={cn(
               mainPath === 'blog' ?'text-myprimary-superlight':''
             )} href={'/blog'}>Blog</Link>
+            <Link className={cn(
+              mainPath === 'about' ?'text-myprimary-superlight':''
+            )} href={'/about'}>About</Link>
           </div>
           <div className='flex gap-2 items-center'>
             <Button className='px-6'>Hire Me</Button>
