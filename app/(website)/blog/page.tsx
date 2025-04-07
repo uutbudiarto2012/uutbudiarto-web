@@ -2,7 +2,12 @@ import Blog from '@/components/blogs'
 import FormSearchFilter from '@/components/blogs/form-search'
 import BlogHilight from '@/components/blogs/hilight'
 import LatestBlog from '@/components/blogs/latest-blog'
-
+export async function generateMetadata() {
+  return {
+    title: 'Blog - Uut Budiarto',
+    description: `A tech blog covering fullstack development (Node.js, React, Next.js, Nuxt.js), blockchain, and crypto. Written by a Fullstack Developer passionate about Web3 and future technologies.`,
+  };
+}
 export default function BlogPage() {
   return (
     <>

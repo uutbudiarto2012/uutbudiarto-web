@@ -1,8 +1,26 @@
+import { axiosClient } from '@/lib/axiosClient'
+import { WPPost } from '@/types/post'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+const Excerpt = dynamic(() => import('./exerpt'), { ssr: false })
+export async function getLatestBlog(): Promise<WPPost[]> {
+  const response = await axiosClient({
+    url: 'posts',
+    params: {
+      per_page: 4,
+      orderby: 'date',
+      order: 'desc',
+      _embed: '',
+      _fields: 'id, title, excerpt, _links, _embedded, slug'
+    }
+  })
+  return response.data
+}
 
-export default function LatestBlog() {
+export default async function LatestBlog() {
+  const data = await getLatestBlog()
   return (
     <div className="container">
       <div className='mb-3'>
@@ -10,21 +28,18 @@ export default function LatestBlog() {
       </div>
       <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4'>
         {
-          [1, 2, 3, 4, 6, 7, 2, 6].map((item, index) => (
-            <Link key={index} className='aspect-[5/3] hover:scale-105 duration-500' href={'/text-slug-detail-123'}>
+          data?.map((item, index) => (
+            <Link key={index} className='aspect-[5/3] hover:scale-105 duration-500' href={item.slug}>
               <div className='relative h-full w-full rounded md:rounded-md overflow-hidden'>
-                <Image width={1000} height={1000} className="h-full w-full object-cover z-0" alt="link" src={'/images/gallery/' + item + '.png'} />
+                {item._embedded?.['wp:featuredmedia'] && <Image width={1000} height={1000} className="h-full w-full object-cover z-0" alt="link" src={item._embedded?.['wp:featuredmedia']?.[0]?.['source_url'] || '/images/gallery/1.png'} />}
               </div>
               <div className='py-2'>
-                <h2 className='text-xl md:text-2xl leading-none line-clamp-1'>Lorem ipsum dolor sit amet.</h2>
-                <p className='text-xs line-clamp-2'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione accusamus libero officiis at praesentium beatae incidunt architecto ea animi deleniti!
-                </p>
+                <h2 className='text-xl md:text-2xl leading-none line-clamp-2' dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+                <Excerpt className='text-xs md:text-sm line-clamp-2' html={item?.excerpt?.rendered} />
               </div>
             </Link>
           ))
         }
-
       </div>
     </div>
   )

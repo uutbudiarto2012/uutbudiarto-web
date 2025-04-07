@@ -102,7 +102,7 @@ const ToolItem = ({ image, name }: { image: string, name: string }) => {
         className="h-full w-full object-contain p-1 rounded-lg z-10 relative"
       />
       <div className="absolute left-0 right-0 bottom-0 top-0 z-0 flex items-center justify-center">
-        <div className='h-10 w-10 bg-white blur-md'></div>
+        <div className='h-10 w-10 bg-myprimary-superlight/30 blur-md'></div>
       </div>
     </div>
   )
