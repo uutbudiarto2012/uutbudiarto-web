@@ -51,7 +51,9 @@ export default function MainNavbar() {
             )} href={'/blog'}>Blog</Link>
           </div>
           <div className='flex gap-2 items-center'>
-            <Button className='px-6'>Hire Me</Button>
+            <Button className='px-6' asChild>
+              <Link href={'/contact'}>Hire Me</Link>
+            </Button>
             <MenuMobile />
           </div>
         </div>

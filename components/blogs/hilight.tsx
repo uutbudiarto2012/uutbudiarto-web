@@ -20,7 +20,7 @@ export default async function BlogHilight() {
       <div className='grid grid-cols-2 gap-2 md:gap-5'>
         {
           data.map(item => (
-            <Link key={item.id} className='aspect-[5/3] group' href={item.slug}>
+            <Link key={item?.id} className='aspect-[5/3] group' href={item?.slug}>
               <div className='relative h-full w-full rounded md:rounded-md overflow-hidden'>
                 {item._embedded?.['wp:featuredmedia'] && <Image width={1000} height={1000} className="h-full w-full object-cover z-0 group-hover:scale-110 duration-500" alt="link" src={item._embedded?.['wp:featuredmedia']?.[0]?.['source_url'] || '/images/gallery/1.png'} />}
               </div>

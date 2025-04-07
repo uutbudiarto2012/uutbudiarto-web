@@ -26,6 +26,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "secure.gravatar.com",
       },
+      {
+        protocol: "https",
+        hostname: "cms.uutbudiarto.fun",
+      },
     ],
   },
 };

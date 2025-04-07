@@ -14,11 +14,14 @@ export async function getLargeHilight(): Promise<WPPost> {
 
 export default async function LargeHilight() {
   const data = await getLargeHilight()
+  if (!data) {
+    return undefined
+  }
   return (
-    <Link href={data.slug}>
+    <Link href={data?.slug}>
       <div className='group'>
         <div className='relative aspect-[12/8] rounded md:rounded-md overflow-hidden'>
-          {data._embedded?.['wp:featuredmedia'] && <Image width={1000} height={1000} className="h-full w-full object-cover z-0 group-hover:scale-110 duration-500" alt="link" src={data._embedded?.['wp:featuredmedia']?.[0]?.['source_url'] || '/images/gallery/1.png'} />}
+          {data?._embedded?.['wp:featuredmedia'] && <Image width={1000} height={1000} className="h-full w-full object-cover z-0 group-hover:scale-110 duration-500" alt="link" src={data._embedded?.['wp:featuredmedia']?.[0]?.['source_url'] || '/images/gallery/1.png'} />}
         </div>
         <div className='py-1'>
           <h2 className='text-2xl md:text-3xl leading-none line-clamp-2' dangerouslySetInnerHTML={{ __html: data.title.rendered }} />
