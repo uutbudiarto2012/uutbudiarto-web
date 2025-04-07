@@ -1,7 +1,55 @@
 import PageContainer from '@/components/containers/page-container';
 import { Timeline } from '@/components/ui/timeline';
+import { Metadata } from 'next';
 import Image from 'next/image';
-
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: 'Experience - Uut Budiarto',
+    description: 'Explore the professional journey of Uut Budiarto, including key roles, companies, and projects that highlight his experience as a frontend developer.',
+    keywords: [
+      'Frontend Developer Experience',
+      'Web Developer Portfolio',
+      'React Developer Career',
+      'Uut Budiarto Resume',
+      'Developer Work History'
+    ],
+    openGraph: {
+      title: 'Professional Experience — Uut Budiarto',
+      description: `A timeline of Uut Budiarto's professional career, showcasing roles, companies, and impactful contributions.`,
+      url: `${process.env.SITE_URL}/experience`,
+      type: 'website',
+      images: [
+        {
+          url: `${process.env.SITE_URL}/jawaskrip.png`,
+          width: 512,
+          height: 512,
+          alt: 'Professional Experience of Uut Budiarto',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Professional Experience - Uut Budiarto',
+      description: `A timeline of Uut Budiarto's career as a web developer.`,
+      images: [`${process.env.SITE_URL}/jawaskrip.png`],
+      creator: '@jawaskrip',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-snippet': -1,
+        'max-image-preview': 'large',
+        'max-video-preview': -1,
+      },
+    },
+    alternates: {
+      canonical: `${process.env.SITE_URL}/experience`,
+    },
+  };
+};
 export default function ExperiencePage() {
   const data = [
     {

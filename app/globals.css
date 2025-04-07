@@ -88,7 +88,12 @@ h3 {
     article h4,
     article h5,
     article h6,
-    article code {
+    article strong,
+    article code,
+    article table tr th {
         @apply text-slate-300 !important;
+    }
+    article figure.size-full img {
+        @apply w-full;
     }
 }

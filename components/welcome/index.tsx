@@ -3,6 +3,7 @@ import { Great_Vibes } from 'next/font/google';
 import Image from 'next/image';
 import { BackgroundBeamsWithCollision } from '../ui/background-beams-with-collision';
 import WelcomeTools from './tools';
+import { Button } from '../ui/button';
 const gv = Great_Vibes({
   weight: ['400'],
   subsets: ["latin-ext"]
@@ -34,6 +35,9 @@ export default function WelcomeSection() {
                     I transform visions into functional, high-performing digital experiences with precision and passion. 💡
                   </p>
                 </div>
+                <Button asChild>
+                  <a download href="/cv/UutBudiartoCV.pdf">Download CV</a>
+                </Button>
               </div>
               <div className='relative z-20 mt-12 ml-12 hidden md:flex items-center justify-center'>
                 <div className='relative duration-300 group'>

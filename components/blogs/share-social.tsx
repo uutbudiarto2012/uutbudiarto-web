@@ -9,19 +9,19 @@ import {
   WhatsappIcon,
   WhatsappShareButton
 } from "react-share";
-export default function ShareSocial() {
+export default function ShareSocial({url}:{url:string}) {
   return (
     <div className="flex-1 flex justify-end gap-2">
-      <FacebookShareButton url="google.com">
+      <FacebookShareButton url={url}>
         <FacebookIcon size={32} round />
       </FacebookShareButton>
-      <TwitterShareButton url="google.com">
+      <TwitterShareButton url={url}>
         <TwitterIcon size={32} round />
       </TwitterShareButton>
-      <TelegramShareButton url="google.com">
+      <TelegramShareButton url={url}>
         <TelegramIcon size={32} round />
       </TelegramShareButton>
-      <WhatsappShareButton url="google.com">
+      <WhatsappShareButton url={url}>
         <WhatsappIcon size={32} round />
       </WhatsappShareButton>
     </div>

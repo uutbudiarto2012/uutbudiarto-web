@@ -3,8 +3,9 @@ import { Open_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import ContextProvider from "@/context";
 const os = Open_Sans({
-  subsets:["latin"]
+  subsets: ["latin"]
 })
 
 export const metadata: Metadata = {
@@ -27,7 +28,9 @@ export default function RootLayout({
         )}
       >
         <NextTopLoader />
-        {children}
+        <ContextProvider>
+          {children}
+        </ContextProvider>
       </body>
     </html>
   );
