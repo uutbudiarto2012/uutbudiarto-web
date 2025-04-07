@@ -1,21 +1,10 @@
 import ShareSocial from '@/components/blogs/share-social';
-import { axiosClient } from '@/lib/axiosClient';
 import Image from 'next/image';
 import Link from 'next/link';
 import dayjs from 'dayjs'
 import { headers } from 'next/headers';
-import { WPPost } from '@/types/post';
 import { FaUser } from 'react-icons/fa6';
-
-export async function getBySlug(slug: string): Promise<WPPost> {
-  const response = await axiosClient({
-    url: 'posts?_embed',
-    params: {
-      slug
-    }
-  })
-  return response.data?.[0]
-}
+import { getBySlug } from '@/lib/wp/getBySlug';
 
 export async function generateMetadata({ params }: { params: { blog: string } }) {
   const data = await getBySlug(params.blog)

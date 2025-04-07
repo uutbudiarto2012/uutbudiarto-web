@@ -1,5 +1,6 @@
 import FormSearchFilter from '@/components/blogs/form-search'
-import ResultSearchComp from '@/components/blogs/result-search'
+import dynamic from 'next/dynamic';
+const ResultSearchComp = dynamic(() => import('@/components/blogs/result-search'), { ssr: false });
 import React from 'react'
 
 export default function SearchResultPost() {
