@@ -90,6 +90,8 @@ h3 {
     article h6,
     article strong,
     article code,
+    article ul li,
+    article a,
     article table tr th {
         @apply text-slate-300 !important;
     }

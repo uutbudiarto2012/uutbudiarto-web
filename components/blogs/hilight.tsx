@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
 
 export async function getHilightUp(): Promise<WPPost[]> {
   const response = await axiosClient({
-    url: 'posts?_embed&tags=5&_fields=id,title,excerpt,_links,_embedded,slug',
+    url: 'posts?_embed&tags=3&_fields=id,title,excerpt,_links,_embedded,slug',
   })
   return response.data
 }
