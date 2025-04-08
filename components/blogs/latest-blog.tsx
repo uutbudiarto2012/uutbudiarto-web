@@ -1,10 +1,12 @@
 import { axiosClient } from '@/lib/axiosClient'
 import { WPPost } from '@/types/post'
-import dynamic from 'next/dynamic'
+import loadDynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-const Excerpt = dynamic(() => import('./exerpt'), { ssr: false })
+const Excerpt = loadDynamic(() => import('./exerpt'), { ssr: false })
+
+export const dynamic = 'force-dynamic'
 export async function getLatestBlog(): Promise<WPPost[]> {
   const response = await axiosClient({
     url: 'posts',

@@ -1,9 +1,11 @@
 "use client"
 import { useBlog } from '@/hooks/useBlog'
-import dynamic from 'next/dynamic'
+import loadDynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
-const Excerpt = dynamic(() => import('./exerpt'), { ssr: false })
+const Excerpt = loadDynamic(() => import('./exerpt'), { ssr: false })
+export const dynamic = 'force-dynamic'
+
 export default function Blog() {
   const { data, isLoading } = useBlog()
   return (
