@@ -54,7 +54,7 @@ export default async function BlogDetail({ params }: { params: { blog: string } 
       </div>
       <div className='container'>
         <div className="grid md:grid-cols-5 gap-4">
-          <div className='md:col-span-3'>
+          <div className='md:col-span-3 w-full overflow-hidden'>
             <header className='mb-2'>
               <h1 className='text-3xl md:text-4xl font-semibold leading-none' dangerouslySetInnerHTML={{ __html: data.title.rendered }} />
             </header>
