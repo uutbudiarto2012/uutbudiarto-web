@@ -3,8 +3,11 @@ import Link from 'next/link'
 import LargeHilight from './large-hilight'
 import { axiosClient } from '@/lib/axiosClient'
 import { WPPost } from '@/types/post'
-import dynamic from 'next/dynamic'
-const Excerpt = dynamic(() => import('./exerpt'), { ssr: false })
+import loadDynamic from 'next/dynamic'
+const Excerpt = loadDynamic(() => import('./exerpt'), { ssr: false })
+
+export const dynamic = 'force-dynamic'
+
 export async function getHilightUp(): Promise<WPPost[]> {
   const response = await axiosClient({
     url: 'posts?_embed&tags=5&_fields=id,title,excerpt,_links,_embedded,slug',
