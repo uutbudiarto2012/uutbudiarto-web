@@ -2,6 +2,7 @@ import Blog from '@/components/blogs'
 import FormSearchFilter from '@/components/blogs/form-search'
 import BlogHilight from '@/components/blogs/hilight'
 import LatestBlog from '@/components/blogs/latest-blog'
+export const dynamic = 'force-dynamic'
 export async function generateMetadata() {
   return {
     title: 'Blog - Uut Budiarto',
