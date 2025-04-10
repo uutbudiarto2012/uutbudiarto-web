@@ -1,9 +1,9 @@
+import ContextProvider from "@/context";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Open_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import ContextProvider from "@/context";
 const os = Open_Sans({
   subsets: ["latin"]
 })
