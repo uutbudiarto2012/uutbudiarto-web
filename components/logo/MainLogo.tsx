@@ -12,7 +12,7 @@ export default function MainLogo() {
       'text-3xl md:text-4xl font-semibold md:font-bold',
       'bg-gradient-to-tr from-myprimary-light via-myprimary-superlight to-myprimary inline-block text-transparent bg-clip-text'
     )}>
-      Uut Budiarto
+      Uut B
     </Link>
   )
 }
