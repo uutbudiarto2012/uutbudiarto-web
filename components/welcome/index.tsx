@@ -49,7 +49,7 @@ export default function WelcomeSection() {
                       <Image className='z-0 blur-[3px] opacity-90' fill alt='ETH' src={'/images/jawaskrip.png'} />
                     </div>
                     <div className='h-[230px] backdrop-blur-[2px] overflow-hidden w-[230px] shrink-0 relative z-20 bg-gradient-to-tl from-myprimary-light/50 via-myprimary/80 to-myprimary-superlight/50'>
-                      <Image className='z-0 blur-sm scale-90 group-hover:scale-100 group-hover:blur-none duration-300' fill alt='ETH' src={'/images/jawaskrip.png'} />
+                      <Image className='z-0 scale-90 group-hover:scale-100 group-hover:blur-none duration-300' fill alt='ETH' src={'/images/jawaskrip.png'} />
                     </div>
                   </div>
                 </div>
