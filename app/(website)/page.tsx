@@ -34,7 +34,7 @@ export default function HomePage() {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Uut Budiarto",
-              "url": "https://uutbudiarto.fun",
+              "url": "https://uutbudiarto-web.vercel.app",
               "sameAs": [],
               "jobTitle": "Web Developer",
               "description": "Uut Budiarto is a professional web developer who specializes in modern JavaScript frameworks like Next.js."
