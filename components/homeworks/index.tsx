@@ -15,7 +15,7 @@ export default function HomeWorks() {
         <div className="grid md:grid-cols-2 md:absolute left-0 right-0 top-0 bottom-0 w-full overflow-hidden">
           <div></div>
           <div className='relative w-full border rounded-sm md:rounded-xl md:translate-x-7'>
-            <Image className='z-0 h-full w-full blur-[5px] group-hover:blur-0 duration-300 object-cover object-left rounded-sm md:rounded-xl' width={1200} height={1200} alt='admin' src={'/images/works/admin-2.png'} />
+            <Image className='z-0 h-full w-full group-hover:blur-0 duration-300 object-cover object-left rounded-sm md:rounded-xl' width={1200} height={1200} alt='admin' src={'/images/works/admin-2.png'} />
           </div>
         </div>
         <div className="container py-7 md:py-14">
@@ -38,7 +38,7 @@ export default function HomeWorks() {
         <div className="grid md:grid-cols-2 md:absolute left-0 right-0 top-0 p-0 bottom-0 w-full overflow-hidden">
           <div className='relative w-full md:overflow-hidden overflow-auto h-[50vh] md:h-auto md:-translate-x-12 p-0'>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className='z-0 border-myprimary-light/30 blur-[5px] group-hover:blur-0 duration-300' alt='admin' src={'/images/works/supreme-1.png'} />
+            <img className='z-0 border-myprimary-light/30 group-hover:blur-0 duration-300' alt='admin' src={'/images/works/supreme-1.png'} />
           </div>
           <div></div>
         </div>
@@ -64,7 +64,7 @@ export default function HomeWorks() {
           </div>
         </div>
       </div>
-      <div className='py-4 flex justify-center'>
+      <div className='py-8 flex justify-center'>
         <Button asChild>
           <Link href={'/work'}>Show More Work</Link>
         </Button>

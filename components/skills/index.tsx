@@ -17,7 +17,7 @@ export default function SkillSection() {
             tools and frameworks that I usually use in software development
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           <SkillItem name="TailwindCSS" desc="Rapidly build modern websites without ever leaving your HTML." image="/images/skills/tailwind.png" />
           <SkillItem name="ReactJS" desc="The library for web and native user interfaces" image="/images/skills/react.png" />
           <SkillItem name="NextJS" desc="The React Framework for the Web" image="/images/skills/next.png" />
